@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página de Juegos</title>
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px #000;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1em;
+      border: 2px solid #fff;
+      background-color: #000;
+      color: #fff;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #00f;
+    }
+
+    .embeddedGame {
+      margin-bottom: 40px;
+    }
+
+    iframe {
+      border: none;
+      box-shadow: 0px 0px 10px #fff;
+    }
+
+    .gameTitle {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #00FF00; /* Color del título */
+      text-shadow: 2px 2px #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>1002 juegos</h1>
+
+  <!-- Barra de búsqueda -->
+  <input type="text" id="searchInput" placeholder="Buscar juegos...">
+
+  <!-- Contenedor de juegos -->
+  <div id="embeddedGames">
+    <!-- WebView para cargar un juego embebido -->
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://www.coolmathgames.com/es')">coolmathgames 1</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://www.1001juegos.com/')">1001 juegos2</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://poki.com/es')">poki3</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://www.bing.com/ck/a?!&&p=d5f1cd89dd7d3257JmltdHM9MTcxMTkyOTYwMCZpZ3VpZD0xOWU4Yzc2Ni03MGEyLTYyMGQtMGNiZi1kNGQ0NzE3ZjYzYjImaW5zaWQ9NTIyOA&ptn=3&ver=2&hsh=3&fclid=19e8c766-70a2-620d-0cbf-d4d4717f63b2&psq=brawl+stars+jugar+online+gratis+sin+descargar&u=a1aHR0cHM6Ly93d3cubWluaWp1ZWdvcy5jb20vanVlZ28vYnJhd2wtc3RhcnM&ntb=1')">minijuegos 4</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://www.bing.com/ck/a?!&&p=ed827f678bfbd6f6JmltdHM9MTcxMTkyOTYwMCZpZ3VpZD0xOWU4Yzc2Ni03MGEyLTYyMGQtMGNiZi1kNGQ0NzE3ZjYzYjImaW5zaWQ9NTIyMw&ptn=3&ver=2&hsh=3&fclid=19e8c766-70a2-620d-0cbf-d4d4717f63b2&psq=clash+royal+jugar+online+gratis+sin+descargar&u=a1aHR0cHM6Ly93d3cuanVlZ29zZGlhcmlvcy5jb20vanVlZ29zL2NsYXNoLXJveWFsZS1ncmF0aXMuaHRtbA&ntb=1')">juegos</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://geometrydash.io/')">juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://www.bing.com/ck/a?!&&p=07d2f8b63889785eJmltdHM9MTcxMTkyOTYwMCZpZ3VpZD0xOWU4Yzc2Ni03MGEyLTYyMGQtMGNiZi1kNGQ0NzE3ZjYzYjImaW5zaWQ9NTIwNQ&ptn=3&ver=2&hsh=3&fclid=19e8c766-70a2-620d-0cbf-d4d4717f63b2&psq=suika+game&u=a1aHR0cHM6Ly9zdWlrYWdhbWUuY29tLw&ntb=1')">juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://sites.google.com/view/games-unblockedd/')">Juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://www.bing.com/ck/a?!&&p=052a5231392335c0JmltdHM9MTcxMjAxNjAwMCZpZ3VpZD0xOWU4Yzc2Ni03MGEyLTYyMGQtMGNiZi1kNGQ0NzE3ZjYzYjImaW5zaWQ9NTIzOA&ptn=3&ver=2&hsh=3&fclid=19e8c766-70a2-620d-0cbf-d4d4717f63b2&psq=brawl+stars+jugar+online+gratis+sin+descargar&u=a1aHR0cHM6Ly9nYW1lc2dvLm5ldC9lcy9icmF3bC1zdGFycy1vbmxpbmUv&ntb=1')">Juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://www.bing.com/ck/a?!&&p=60c9ebc79b5f1eb3JmltdHM9MTcxMjAxNjAwMCZpZ3VpZD0xOWU4Yzc2Ni03MGEyLTYyMGQtMGNiZi1kNGQ0NzE3ZjYzYjImaW5zaWQ9NTIwMA&ptn=3&ver=2&hsh=3&fclid=19e8c766-70a2-620d-0cbf-d4d4717f63b2&psq=fandejuegos.com&u=a1aHR0cHM6Ly93d3cuZmFuZGVqdWVnb3MuY29tLw&ntb=1')">Juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://now.gg/')">juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://www.play-games.com/')">juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://melonplayground.co/')">juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://gombis.es/')">juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://www.gamepix.com/')">juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+    <div class="embeddedGame">
+      <p class="gameTitle" onclick="loadGame('https://emulatoronline.com/')">juego</p>
+      <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+    </div>
+  </div>
+  
+  <div class="embeddedGame">
+    <p class="gameTitle" onclick="loadGame('https://www.roblox.com/')">juego</p>
+    <iframe id="gameFrame" width="100%" height="400px" scrolling="no" frameborder="0"></iframe>
+  </div>
+</div>
+
+  <script>
+    // Función para cargar la URL seleccionada en el iframe
+    function loadGame(url) {
+      var iframe = document.getElementById('gameFrame');
+      iframe.src = url;
+    }
+
+    // Función para filtrar juegos según el término de búsqueda
+    function searchGames() {
+      var input, filter, games, game, i, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      games = document.getElementsByClassName('embeddedGame');
+
+      for (i = 0; i < games.length; i++) {
+        game = games[i];
+        txtValue = game.textContent || game.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          game.style.display = '';
+        } else {
+          game.style.display = 'none';
+        }
+      }
+    }
+
+    // Evento de entrada de teclado para la búsqueda en tiempo real
+    document.getElementById('searchInput').addEventListener('keyup', searchGames);
+  </script>
+</body>
+</html>

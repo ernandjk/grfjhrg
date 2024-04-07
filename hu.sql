@@ -1,0 +1,30 @@
+CREATE DATABASE IF NOT EXISTS juegos_db;
+
+USE juegos_db;
+
+CREATE TABLE IF NOT EXISTS jugadores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    email VARCHAR(50) UNIQUE NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS juegos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion TEXT,
+    fecha_lanzamiento DATE
+);
+
+CREATE TABLE IF NOT EXISTS partidas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    jugador_id INT,
+    juego_id INT,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    puntuacion INT,
+    nivel INT,
+    FOREIGN KEY (jugador_id) REFERENCES jugadores(id)
+    ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY (juego_id) REFERENCES juegos(id)
+    ON DELETE SET NULL ON UPDATE CASCADE
+);
